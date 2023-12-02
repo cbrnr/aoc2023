@@ -28,3 +28,5 @@ for (id, game) in zip(ids, games)
         counter += id
     end
 end
+
+println("Part 1: ", counter)
