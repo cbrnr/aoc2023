@@ -5,3 +5,4 @@ This repository contains my solutions for [Advent of Code 2023](https://adventof
 - Day 1: [Part 1](https://github.com/cbrnr/aoc2023/blob/main/day01_1.jl) | [Part 2](https://github.com/cbrnr/aoc2023/blob/main/day01_2.jl)
 - Day 2: [Part 1](https://github.com/cbrnr/aoc2023/blob/main/day02_1.jl) | [Part 2](https://github.com/cbrnr/aoc2023/blob/main/day02_2.jl)
 - Day 3: [Part 1](https://github.com/cbrnr/aoc2023/blob/main/day03_1.jl) | [Part 2](https://github.com/cbrnr/aoc2023/blob/main/day03_2.jl)
+- Day 4: [Part 1](https://github.com/cbrnr/aoc2023/blob/main/day04_1.jl)
