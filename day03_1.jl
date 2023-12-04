@@ -7,14 +7,14 @@ grid = permutedims(hcat(collect.(split(strip(input)))...))
 
 """Get indexes of digits in `grid` adjacent to `index`."""
 function get_adjacent_digits(grid::Matrix{Char}, index::CartesianIndex{2})
-    result = Set{CartesianIndex{2}}()
+    result = Vector{CartesianIndex{2}}()
     for (row, col) in ((-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1))
         neighbor = CartesianIndex(index[1] + row, index[2] + col)
         if checkbounds(Bool, grid, neighbor) && isdigit(grid[neighbor])
             push!(result, get_first_digit(grid, neighbor))
         end
     end
-    return result
+    return unique(result)
 end
 
 """Get `grid` index of first digit of the number containing `index`."""
