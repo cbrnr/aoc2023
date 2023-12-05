@@ -13,4 +13,15 @@ points(matches) = matches > 0 ? 2^(matches - 1) : 0
 
 cards = input |> strip |> x -> split(x, "\n") |> x -> split.(x, "|")
 
-println("Part 1: ", cards .|> matches .|> points |> sum)
+function process_deck(cards)
+    deck = Dict(k => 1 for k in 1:length(cards))
+    for (i, card) in enumerate(cards)
+        n = matches(card)
+        for c in i + 1:min(length(cards), i + n)
+            deck[c] += deck[i]
+        end
+    end
+    return deck
+end
+
+println("Part 2: ", sum(values(process_deck(cards))))
